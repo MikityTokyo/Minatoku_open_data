@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Minato-ku Forecast Analysis</title>
+    
+    <!-- ライブラリ読み込み -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+
+
+<!-- グラフデータ読み込み -->
+    <script type="text/javascript" src="./graph001data.js"></script>
+    <script type="text/javascript" src="./graph002data.js"></script>
+    <script type="text/javascript" src="./graph003data.js"></script>
+
+<div class="container-fluid">
+    <div class="page-header">
+	<h2>Minato-ku Forecast Analysis</h2>
+    </div>
+
+<div id="container">
+
+  <ul class="nav nav-tabs nav-justified">
+    <li class="active"><a data-toggle="tab" href="#home">おしらせ</a></li>
+    <li><a data-toggle="tab" href="#menu1">港区人口推移と予測</a></li>
+    <li><a data-toggle="tab" href="#menu2">港区世代別人口推移と予測</a></li>
+    <li><a data-toggle="tab" href="#menu3">国籍別外国人住民数と予測</a></li>
+  </ul>
+  
+<div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+        <div style="height:380px">
+        <h3>更新のお知らせ</h3>
+    <ul>
+        <li>2019年6月までの予測を更新しました。<br>
+        →0～4歳人口の増加が予測されています。
+        </li>
+        <br>
+        <li>港区の施設に、着工予定の施設を追加しました。<br>
+        →0～4歳人口の増加予測を受けて、新しい保育施設が2017年4月に追加されます。
+        </li>
+    </ul>
+      </div>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+        <div id="graph002" ></div>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+        <div id="graph001" ></div> 
+    </div>
+    <div id="menu3" class="tab-pane fade">
+    <div id="graph003" ></div>
+    </div>
+ </div>
+
+<div class="row">
+    <div class="col-xs-12">
+    <h3>港区の施設
+    <div class="pull-right">
+        <a class="btn btn-primary" href="https://fusiontables.google.com/data?docid=1xhR8clhN_Vw_No4yJpsKI9q0B-X15oL_r0f5p3ku#map:id=3" target="_blank">
+        <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+        施設をもっと調べる</a>
+    </div>
+    </h3>
+      <p>Filter: 第1分類 = '学校教育・子どもの施設' AND 第2分類 IN ('幼稚園', '港区保育室')</p>
+      <p>Source: <a href="http://www.city.minato.tokyo.jp/opendata/kokyoshisetsu/minatokushisetsujoho/index.html" target="_blank">http://www.city.minato.tokyo.jp/opendata/kokyoshisetsu/minatokushisetsujoho/index.html</a></p>
+    </div>
+</div>
+      <div class="embed-responsive embed-responsive-16by9">
+	    <iframe width="500" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col5+from+1xhR8clhN_Vw_No4yJpsKI9q0B-X15oL_r0f5p3ku+where+col1+%3D+&#39;%E5%AD%A6%E6%A0%A1%E6%95%99%E8%82%B2%E3%83%BB%E5%AD%90%E3%81%A9%E3%82%82%E3%81%AE%E6%96%BD%E8%A8%AD&#39;+and+col2+in+(&#39;%E5%B9%BC%E7%A8%9A%E5%9C%92&#39;%2C+&#39;%E6%B8%AF%E5%8C%BA%E4%BF%9D%E8%82%B2%E5%AE%A4&#39;)&amp;viz=MAP&amp;h=false&amp;lat=35.651470639361165&amp;lng=139.73781626702885&amp;t=1&amp;z=14&amp;l=col5&amp;y=2&amp;tmplt=2&amp;hml=ONE_COL_LAT_LNG"></iframe>
+      </div>
+</div>
+
+</body>
+</html>
